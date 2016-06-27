@@ -21,7 +21,8 @@ if (instance_exists(ob_nevera_zoom)){
 
     ob_nevera.nevera_cerrada = false;
     ob_nevera.nevera_state = scr_nevera_cerrada;
-    ob_nevera.alarm[1] = 15;
+    audio_play_sound(snd_nevera_cierra, 8, false);
+    ob_nevera.alarm[1] = 5;
 
     with(ob_nevera_zoom){
         instance_destroy();
@@ -34,6 +35,7 @@ if (instance_exists(ob_nevera_zoom)){
     with(ob_mano_julio){
         instance_destroy();
     }
+    
 }
     
 if (instance_exists(ob_blanco_fondo)){ 

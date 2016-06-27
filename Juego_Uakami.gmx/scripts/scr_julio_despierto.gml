@@ -1,17 +1,24 @@
 // cuando Julio está despierto
 
+var snd = snd_loop_juego;
+
+//audio_sound_gain(snd, 1, 500);
+
+audio_sound_pitch(snd, 1);
+
+
 switch (ob_nivel1_1_UI.energia){
     case 5:
     case 4:
     case 3:
-    estado_actual = "despierto"
-    break;
+        estado_actual = "despierto"
+        break;
     case 2:
-    case 1:
-    julio_alert_state = scr_julio_cansado;
-    break;
+        audio_play_sound(snd_bostezo, 8 , false);
+        julio_alert_state = scr_julio_cansado;
+        break;
     case 0:
-    julio_alert_state = scr_julio_mareado;
+        julio_alert_state = scr_julio_mareado;
     break;
 }
 

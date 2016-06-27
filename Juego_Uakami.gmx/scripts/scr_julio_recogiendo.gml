@@ -9,10 +9,14 @@ if (!manos_ocupadas){ // recoge objeto
     switch(intento_recoger){   
         case "plato":
             ob_plato.soy_silueta = true;
+            audio_play_sound(snd_recoge_plato, 8, false);
             break;
         case "llaves":
             ob_llaves.sprite_index = sp_silueta_llaves_default;
             ob_llaves.soy_silueta = true;
+            audio_play_sound(snd_exito_llave, 8, false);
+            audio_sound_gain(snd_exito_llave,0.3,0);
+            audio_play_sound(snd_tomar_llaves, 8, false);
             break; 
     } 
     en_manos = intento_recoger;
@@ -29,12 +33,14 @@ if (!manos_ocupadas){ // recoge objeto
         switch (en_manos) {
             case "plato":
                 ob_plato.soy_silueta = false;
+                audio_play_sound(snd_coloca_plato, 8, false);
                 if(!ob_plato.plato_vacio){
                     ob_nivel1_1_UI.plato_lleno_en_suelo = true;
                 }
                 break;
             case "llaves":
                 ob_llaves.sprite_index = sp_llaves_default;
+                audio_play_sound(snd_soltar_llaves, 8, false);
                 ob_llaves.soy_silueta = false;
                 break;
         }

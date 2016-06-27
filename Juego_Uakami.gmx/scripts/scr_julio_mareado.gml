@@ -1,10 +1,12 @@
 // cuando Julio está mareado
 
 estado_actual = "mareado";
+var snd = snd_loop_juego;
 
 switch (ob_nivel1_1_UI.energia){
     case 5:
     julio_alert_state = scr_julio_despierto;
+    //audio_stop_sound(snd_desafine_mareado);
     estado_actual = "despierto"
     break;
 
@@ -27,3 +29,4 @@ switch (en_manos){
 }
 
 sprite_index = sprite_actual;
+audio_sound_pitch(snd, 0.7);

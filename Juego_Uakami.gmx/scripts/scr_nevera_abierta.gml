@@ -26,6 +26,7 @@ if (zoom == true){
         if (ob_nevera_zoom.objeto_nevera_seleccionado = "leche"){
             if(ob_julio.manos_ocupadas){
                 ob_mano_julio.sprite_index = sp_mano_plato_lleno;
+                
                 ob_plato.plato_vacio = false;
             }
         }

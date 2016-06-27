@@ -22,6 +22,9 @@ sprite_index = sprite_actual;
 ob_nivel1_1_UI.juego_pausa = true;
 perdiste = true;
 
+if (!audio_is_playing(snd_ronquido)){
+    audio_play_sound(snd_ronquido, 8, true);
+}
 
 if (!instance_exists(ob_mensaje_ganaste)){
 

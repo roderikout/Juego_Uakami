@@ -37,7 +37,7 @@ facing = 0; //0 = Right, 1 = Left
 
 sp = 15
 
-target_x = 10
+var target_x
 
 manos_ocupadas = false;
 

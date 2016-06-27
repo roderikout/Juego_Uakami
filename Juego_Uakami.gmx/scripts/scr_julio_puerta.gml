@@ -26,6 +26,12 @@ if (en_manos != "llaves" && en_manos != "nada"){
 
 } else {
 
+    ob_nivel1_1_UI.alarm[4] = 15;
+    
+    if(!audio_is_playing(snd_abre_puerta)){
+        audio_play_sound(snd_abre_puerta, 9, false);
+    }
+
     julio_mov_state = scr_julio_abre_puerta;
 
 }

@@ -7,6 +7,7 @@
   <sounds name="sound">
     <sound>sound\snd_loop_juego</sound>
     <sound>sound\snd_bostezo</sound>
+    <sound>sound\snd_bostezo_2</sound>
     <sound>sound\snd_gato_pifia</sound>
     <sound>sound\snd_alerta</sound>
     <sound>sound\snd_inicio</sound>
@@ -14,6 +15,20 @@
     <sound>sound\snd_perdiste</sound>
     <sound>sound\snd_click</sound>
     <sound>sound\snd_noclick</sound>
+    <sound>sound\snd_na_ah</sound>
+    <sound>sound\snd_abre_puerta</sound>
+    <sound>sound\snd_bebe_taza_1</sound>
+    <sound>sound\snd_bebe_taza_2</sound>
+    <sound>sound\snd_desafine_mareado</sound>
+    <sound>sound\snd_exito_llave</sound>
+    <sound>sound\snd_llena_plato_leche</sound>
+    <sound>sound\snd_recoge_plato</sound>
+    <sound>sound\snd_coloca_plato</sound>
+    <sound>sound\snd_nevera_abre</sound>
+    <sound>sound\snd_nevera_cierra</sound>
+    <sound>sound\snd_ronquido</sound>
+    <sound>sound\snd_tomar_llaves</sound>
+    <sound>sound\snd_soltar_llaves</sound>
   </sounds>
   <sprites name="sprites">
     <sprite>sprites\sp_ventana_inicio</sprite>
@@ -57,15 +72,36 @@
       <sprite>sprites\sp_boton_cafe_glow</sprite>
       <sprite>sprites\sp_boton_pausa_default</sprite>
       <sprite>sprites\sp_select_square</sprite>
+      <sprite>sprites\sp_icono_taza_llena</sprite>
+      <sprite>sprites\sp_icono_taza_vacia</sprite>
+      <sprite>sprites\sp_icono_taza_parpadea</sprite>
+      <sprite>sprites\sp_icono_energia_0</sprite>
+      <sprite>sprites\sp_icono_energia_parpadea</sprite>
+      <sprite>sprites\sp_icono_energia_1</sprite>
+      <sprite>sprites\sp_icono_energia_2</sprite>
+      <sprite>sprites\sp_icono_energia_3</sprite>
+      <sprite>sprites\sp_icono_energia_4</sprite>
+      <sprite>sprites\sp_icono_energia_5</sprite>
+      <sprite>sprites\sp_icono_ojo_despierto</sprite>
+      <sprite>sprites\sp_icono_ojo_cansado_2</sprite>
+      <sprite>sprites\sp_icono_ojo_cansado</sprite>
+      <sprite>sprites\sp_icono_ojo_mareado</sprite>
+      <sprite>sprites\sp_icono_ojo_dormido</sprite>
+      <sprite>sprites\sp_icono_acciones</sprite>
       <sprites name="Mensajes">
         <sprite>sprites\sp_x_cierra</sprite>
-        <sprite>sprites\sp_blanco_blur</sprite>
+        <sprite>sprites\sp_mensaje_status_default</sprite>
         <sprite>sprites\sp_mensaje_alerta_default</sprite>
+        <sprite>sprites\sp_blanco_blur</sprite>
         <sprite>sprites\sp_mensaje_alerta_manos</sprite>
         <sprite>sprites\sp_mensaje_alerta_gato</sprite>
+        <sprite>sprites\sp_mensaje_inicial_cocina</sprite>
         <sprite>sprites\sp_mensaje_alerta_puerta</sprite>
-        <sprite>sprites\sp_mensaje_status_default</sprite>
         <sprite>sprites\sp_mensaje_status_cafe</sprite>
+        <sprite>sprites\sp_mensaje_status_gato_bebe</sprite>
+        <sprite>sprites\sp_mensaje_status_gato_camina</sprite>
+        <sprite>sprites\sp_mensaje_status_despierto</sprite>
+        <sprite>sprites\sp_mensaje_status_taza_llena</sprite>
         <sprite>sprites\sp_mensaje_status_manos</sprite>
         <sprite>sprites\sp_mensaje_status_gato</sprite>
         <sprite>sprites\sp_mensaje_status_puerta</sprite>
@@ -92,6 +128,8 @@
       <sprite>sprites\sp_nevera_abierta_default</sprite>
       <sprite>sprites\sp_nevera_zoom</sprite>
       <sprite>sprites\sp_cafetera</sprite>
+      <sprite>sprites\sp_cafetera_azul</sprite>
+      <sprite>sprites\sp_cafetera_roja</sprite>
       <sprite>sprites\sp_cafetera_glow</sprite>
       <sprite>sprites\sp_llaves_default</sprite>
       <sprite>sprites\sp_plato_vacio_default</sprite>
@@ -103,10 +141,12 @@
       <sprite>sprites\sp_silueta_llaves_default</sprite>
       <sprite>sprites\sp_gato_default</sprite>
       <sprite>sprites\sp_gato_caminando_default</sprite>
+      <sprite>sprites\sp_gato_bebe</sprite>
       <sprite>sprites\sp_gato_llaves_default</sprite>
       <sprite>sprites\sp_mano_vacia</sprite>
       <sprite>sprites\sp_mano_plato_lleno</sprite>
       <sprite>sprites\sp_mano_plato_vacio</sprite>
+      <sprite>sprites\sp_animacion_leche</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
@@ -188,8 +228,7 @@
   </fonts>
   <objects name="objects">
     <object>objects\ob_inicio</object>
-    <object>objects\ob_boton_pausa</object>
-    <object>objects\ob_boton_cafe</object>
+    <object>objects\ob_HUD</object>
     <objects name="Nivel 1">
       <object>objects\ob_nivel1_1_UI</object>
       <objects name="Comunes Nivel 1">
@@ -214,8 +253,10 @@
         <object>objects\ob_nevera_zoom</object>
         <object>objects\ob_llaves</object>
         <object>objects\ob_cafetera</object>
+        <object>objects\ob_selector</object>
         <object>objects\ob_mano_julio</object>
         <object>objects\ob_plato</object>
+        <object>objects\ob_animacion_leche</object>
       </objects>
     </objects>
     <objects name="Objetos padres">
@@ -232,7 +273,14 @@
       <object>objects\ob_blanco_fondo</object>
       <object>objects\ob_x_cierra</object>
     </objects>
-    <object>objects\ob_selector</object>
+    <objects name="UI">
+      <object>objects\ob_boton_pausa</object>
+      <object>objects\ob_boton_cafe</object>
+      <object>objects\ob_icono_taza</object>
+      <object>objects\ob_icono_acciones</object>
+      <object>objects\ob_icono_energia</object>
+      <object>objects\ob_icono_ojo</object>
+    </objects>
   </objects>
   <rooms name="rooms">
     <room>rooms\rm_inicio</room>

@@ -63,6 +63,8 @@ plato_lleno_en_suelo = false;
 
 //variables de mensajeria
 
+sale_mensaje = false; // para alarma de mensaje perdiste, ganaste
+
 mensaje_off = true;
 
 acciones_al_activar_alarma1 = acciones;
@@ -116,11 +118,63 @@ audio_stop_sound(snd_inicio);
 
 audio_stop_sound(snd_ganaste);
 
+suena = true; // variable para sonido de a ah de objetos no usables
+
 
 // to test
 
 donde_estoy = "nowhere";
 isBoton = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="4">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// tiempo para mensajes de ganaste, perdiste, etc.
+
+sale_mensaje = true;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="3">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>///Alarma para sonidos de a ah
+
+suena = true;
 </string>
           </argument>
         </arguments>
@@ -266,6 +320,8 @@ script_execute(hago_click);
           <argument>
             <kind>1</kind>
             <string>/// Variables para los Draws
+
+/*
 if (GUI_on == true){
 
     draw_set_font(fnt_ayudas);
@@ -282,14 +338,14 @@ if (GUI_on == true){
     
     }
     
-    
+ */   
     //Para testings
     //draw_text(32,80,"Testeo donde estoy: " + string(donde_estoy));
-    //draw_text(32,96,"Testeo instancia existe: " + string(instance_exists(ob_nevera_zoom)));
+    //draw_text(32,96,"Testeo busco Tile_under: " + string(Tile_under));
     //draw_text(32,112,"Testeo isBoton: " + string(isBoton));
     //draw_text(32,128,"Testeo manos intentando: " + string(ob_julio.intento_recoger));
     //draw_text(32,144,"Testeo donde estoy: " + string(donde_estoy));
-    
+ /*   
     draw_rectangle_colour(200,34,200+(energia/max_energia)*80,46,c_green,c_green,c_green,c_green,0);
     draw_rectangle_colour(120,52,120+(cafe_en_taza/max_cafe_en_taza)*80,64,c_green,c_green,c_green,c_green,0);
 
@@ -317,6 +373,31 @@ if (GUI_on == true){
           <argument>
             <kind>11</kind>
             <room>rm_cocina</room>
+          </argument>
+        </arguments>
+      </action>
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// comenzar de nuevo
+
+audio_play_sound(snd_click, 9, false)
+audio_stop_all();
+room_goto(rm_cocina);
+</string>
           </argument>
         </arguments>
       </action>

@@ -3,8 +3,8 @@
   <caption></caption>
   <width>1920</width>
   <height>1080</height>
-  <vsnap>32</vsnap>
-  <hsnap>32</hsnap>
+  <vsnap>60</vsnap>
+  <hsnap>60</hsnap>
   <isometric>0</isometric>
   <speed>15</speed>
   <persistent>0</persistent>
@@ -58,21 +58,24 @@
     <instance objName="ob_nevera" x="1441" y="728" name="inst_045E2A37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_gato" x="650" y="752" name="inst_17A2C793" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_llaves" x="794" y="766" name="inst_D739705F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile1" x="197" y="807" name="inst_668714F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile2" x="310" y="808" name="inst_04E9AE25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile3" x="481" y="809" name="inst_9E57E397" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile4" x="652" y="809" name="inst_A7329895" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile5" x="818" y="809" name="inst_83DFFE08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile6" x="1022" y="809" name="inst_A8199F75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile7" x="1238" y="810" name="inst_F376F266" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile8" x="1466" y="810" name="inst_E1647EC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_tile9" x="1680" y="811" name="inst_850C1555" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_boton_cafe" x="1741" y="990" name="inst_CD7C2061" locked="0" code="" scaleX="1.27999997138977" scaleY="1.26760566234589" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile1" x="167" y="807" name="inst_668714F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile2" x="285" y="809" name="inst_04E9AE25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile3" x="431" y="809" name="inst_9E57E397" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile4" x="611" y="809" name="inst_A7329895" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile5" x="805" y="809" name="inst_83DFFE08" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile6" x="1051" y="810" name="inst_A8199F75" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile7" x="1292" y="810" name="inst_F376F266" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile8" x="1500" y="809" name="inst_E1647EC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_tile9" x="1709" y="808" name="inst_850C1555" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_boton_cafe" x="1738" y="1058" name="inst_CD7C2061" locked="0" code="" scaleX="1.27999997138977" scaleY="1.26760566234589" colour="4294967295" rotation="0"/>
     <instance objName="ob_nivel1_1_UI" x="0" y="0" name="inst_5167075F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_llaves" x="616" y="746" name="inst_0BE8B2E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_boton_pausa" x="1801" y="137" name="inst_94E0E4AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_boton_pausa" x="1767" y="174" name="inst_94E0E4AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_HUD" x="0" y="0" name="inst_4F46716E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
-  <tiles/>
+  <tiles>
+    <tile bgName="" x="512" y="288" w="16" h="16" xo="0" yo="0" id="10000001" name="inst_3B2BB81C" depth="1000000" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>
+  </tiles>
   <PhysicsWorld>0</PhysicsWorld>
   <PhysicsWorldTop>0</PhysicsWorldTop>
   <PhysicsWorldLeft>0</PhysicsWorldLeft>

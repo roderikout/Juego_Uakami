@@ -68,10 +68,12 @@ if (!ob_julio.perdiste){
             <kind>1</kind>
             <string>/// steps del mensaje de ganaste o perdiste
 
+
 if(mouse_check_button_released(mb_left)){
     
     if (point_in_rectangle(mouse_x, mouse_y, 715, 493, 1178, 562)){   //si es el boton para reanudar juego
     
+        audio_stop_all();
         room_goto(rm_cocina);
             
     }
@@ -104,9 +106,10 @@ if(mouse_check_button_released(mb_left)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Coordenadas
 
-//draw_text(20, 20, string(mouse_x) + " " + string(mouse_y));
+draw_text(100, 200,"X = " + string(mouse_x));
+draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>

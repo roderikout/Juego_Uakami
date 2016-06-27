@@ -33,6 +33,7 @@ yo_soy = "zoom_nevera";
 
 objeto_nevera_seleccionado = "nada";
 
+aparece_animacion_leche = true;
 </string>
           </argument>
         </arguments>
@@ -74,8 +75,23 @@ if (!instance_exists(ob_selector)){
 
 if mouse_check_button_released(mb_left){
     if (instance_position(mouse_x, mouse_y, ob_selector)){
+        audio_play_sound(snd_click, 9, false)
         selector_nevera_clicado = instance_position(mouse_x, mouse_y, ob_selector);
         objeto_nevera_seleccionado = selector_nevera_clicado.mi_identificador;
+        if (selector_nevera_clicado.mi_identificador == "leche"){
+        
+            if(!instance_exists(ob_animacion_leche)) {
+            
+                if(ob_nevera_zoom.aparece_animacion_leche){
+            
+                    instance_create(x-135, y -135, ob_animacion_leche);
+                }
+            }
+            if(!audio_is_playing(snd_llena_plato_leche)){
+                audio_play_sound(snd_llena_plato_leche, 8, false);
+            }
+        
+        }
     }
 }
 

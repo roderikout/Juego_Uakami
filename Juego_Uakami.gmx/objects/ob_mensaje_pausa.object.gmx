@@ -61,18 +61,21 @@ if(mouse_check_button_released(mb_left)){
     
         ob_nivel1_1_UI.juego_pausa = false;
         ob_nivel1_1_UI.GUI_on = true;
+        audio_play_sound(snd_click, 9, false)
         with (self){
             instance_destroy();        
         }
     }
     
-    if (point_in_rectangle(mouse_x, mouse_y, 304, 470, 781, 543)){   //si es el boton para reanudar juego
-    
+    if (point_in_rectangle(mouse_x, mouse_y, 304, 470, 781, 543)){   //si es el boton para reiniciar juego
+        
+        audio_play_sound(snd_click, 9, false)
+        audio_stop_all();
         room_goto(rm_cocina);
             
     }
     
-    if (point_in_rectangle(mouse_x, mouse_y, 304, 653, 781, 724)){   //si es el boton para reanudar juego
+    if (point_in_rectangle(mouse_x, mouse_y, 304, 653, 781, 724)){   //si es el boton para salir del juego
     
         game_end();
             
@@ -100,9 +103,10 @@ if(mouse_check_button_released(mb_left)){
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>/// Coordenadas
 
-//draw_text(20, 20, string(mouse_x) + " " + string(mouse_y));
+draw_text(100, 200,"X = " + string(mouse_x));
+draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>
