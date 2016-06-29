@@ -1,5 +1,7 @@
 // cuando el gato ya no tiene las llaves
 
+mensaje_caminando_salio = false;
+
 speed = 0;
 
 if (ob_julio.en_manos == "llaves"){

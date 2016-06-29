@@ -38,6 +38,8 @@ nevera_state = scr_nevera_desactivada;
 mensajeAyuda = "Aquí todos tienen algo de comer";
 
 zoom = false;
+
+sono_abrir_puerta = false;
 </string>
           </argument>
         </arguments>
@@ -68,6 +70,7 @@ nevera_cerrada = true;
 ob_nivel1_1_UI.acciones +=1;
 ob_nivel1_1_UI.energia -=1;
 zoom = false;
+sono_abrir_puerta = false;
 </string>
           </argument>
         </arguments>

@@ -56,8 +56,8 @@ tipo_mensaje = "ninguno";
             <kind>1</kind>
             <string>/// Coordenadas
 
-draw_text(100, 200,"X = " + string(mouse_x));
-draw_text(100, 350,"Y = " + string(mouse_y));
+//draw_text(100, 200,"X = " + string(mouse_x));
+//draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>

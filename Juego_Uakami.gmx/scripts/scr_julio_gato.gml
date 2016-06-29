@@ -14,8 +14,15 @@ if (en_manos != "nada"){
 
 } else {
 
-    julio_mov_state = scr_julio_estatico;
+    if (ob_gato.gato_bebe_leche){
     
-    ob_nivel1_1_UI.mensajes_state = scr_mensaje_alerta_gato;
+        ob_nivel1_1_UI.mensajes_state = scr_mensaje_status_gato_bebe;
+    
+    } else {
+        ob_nivel1_1_UI.mensajes_state = scr_mensaje_alerta_gato;
+    
+    }
+    
+    julio_mov_state = scr_julio_estatico;
 
 }

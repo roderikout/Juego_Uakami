@@ -16,4 +16,10 @@ if (ob_nivel1_1_UI.cafe_en_taza > 0){
     julio_mov_state = scr_julio_estatico;
     
     ob_nivel1_1_UI.mensajes_alerta_salieron[4] = 0;
+} else {
+    if(!audio_is_playing(snd_na_ah) && no_sono_na_ah){
+        audio_play_sound(snd_na_ah, 9, false);
+        no_sono_na_ah = false;
+    }
+    ob_nivel1_1_UI.mensajes_state = scr_mensaje_status_sin_cafe;
 }

@@ -63,6 +63,8 @@ dist = 10 //point_distance(x, y, target_x, y)
 
 perdiste = false;
 
+no_sono_na_ah = true;
+
 llegue = 0 //para testeo
 
 </string>

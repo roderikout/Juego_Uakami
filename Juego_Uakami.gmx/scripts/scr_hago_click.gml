@@ -5,7 +5,8 @@
 script_execute(scr_mensajes_ayuda);
 
 
-if (mouse_check_button_released(mb_left) && !ob_julio.caminando){
+if (mouse_check_button_released(mb_left) && !ob_julio.caminando){    
+
     instInteract = instance_position(mouse_x, mouse_y, ob_interactuable); //instancia interactuable
     isBoton = instance_position(mouse_x, mouse_y, ob_x_cierra);
     
@@ -20,11 +21,11 @@ if (mouse_check_button_released(mb_left) && !ob_julio.caminando){
             }else if (object_is_ancestor(object_index,ob_recogible)) {  //si el objeto es un recogible
                 Tile_under = instance_position(x, y, ob_superTile); //tile que esta debajo directamente del objeto
                 Obj_parent = "recogible";
-                if (!soy_silueta && Tile_under == ob_julio.tile_actual){
-                    soy_silueta = true;
-                } else {
-                    soy_silueta = false;
-                }
+                    if (!soy_silueta && Tile_under == ob_julio.tile_actual && !ob_nivel1_1_UI.juego_pausa && !ob_nivel1_1_UI.plato_lleno_en_suelo){
+                        soy_silueta = true;
+                    } else {
+                        soy_silueta = false;
+                    }
             
             }else{             //si el objeto es interactuable
                 Tile_under = collision_line(x, y, x, 780, ob_superTile, true, false); //tile que esta abajo linealmente del objeto
@@ -60,8 +61,8 @@ if (mouse_check_button_released(mb_left) && !ob_julio.caminando){
                     }
                 }
 
-            } else {
-                audio_play_sound(snd_na_ah, 9, false)      
+            } else if(!juego_pausa) {
+                audio_play_sound(snd_na_ah, 9, false);      
             }
         }
         
@@ -90,7 +91,8 @@ if (mouse_check_button_released(mb_left) && !ob_julio.caminando){
                     audio_play_sound(snd_click, 9, false)
                     ob_julio.julio_mov_state = scr_julio_bebe_cafe;
                 } else {
-                    audio_play_sound(snd_na_ah, 9, false)       
+                    audio_play_sound(snd_na_ah, 9, false)
+                    mensajes_state = scr_mensaje_status_energia_full;       
                 }
             
             }
@@ -142,19 +144,22 @@ if (mouse_check_button_released(mb_left) && !ob_julio.caminando){
                         ob_julio.julio_mov_state = scr_julio_llena_taza;
                                                         
                     } else {
-                        audio_play_sound(snd_na_ah, 9, false)       
+                        audio_play_sound(snd_na_ah, 9, false);
+                        mensajes_state = scr_mensaje_status_taza_llena;       
                     }
                 
                 }
                 
             } else if (Obj_name != "boton_pausa" && Obj_name !="boton_cafe" && !juego_pausa) {
-                audio_play_sound(snd_na_ah, 9, false)       
-            }
+                
+                audio_play_sound(snd_na_ah, 9, false);
+                      
+            } 
         }
         
     }
     
-    if (ob_nivel1_1_UI.isBoton > 0){   //si es el boton para cerrar mensajes
+    if (ob_nivel1_1_UI.isBoton > 0 && !instance_exists(ob_animacion_leche)){   //si es el boton para cerrar mensajes
              
         mensajes_state = scr_elimina_mensajes;
         audio_play_sound(snd_click, 9, false)

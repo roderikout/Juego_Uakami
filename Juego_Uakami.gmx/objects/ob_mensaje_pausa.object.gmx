@@ -32,6 +32,8 @@ event_inherited();
 yo_soy = "mensaje_pausa";
 
 ob_nivel1_1_UI.GUI_on = false;
+
+depth = -120
 </string>
           </argument>
         </arguments>
@@ -105,8 +107,8 @@ if(mouse_check_button_released(mb_left)){
             <kind>1</kind>
             <string>/// Coordenadas
 
-draw_text(100, 200,"X = " + string(mouse_x));
-draw_text(100, 350,"Y = " + string(mouse_y));
+//draw_text(100, 200,"X = " + string(mouse_x));
+//draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>

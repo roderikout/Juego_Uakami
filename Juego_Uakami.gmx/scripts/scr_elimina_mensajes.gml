@@ -15,6 +15,10 @@ if (instance_exists(ob_mensajes_status)){
     with(ob_mensajes_status){
         instance_destroy();
     }
+    
+    ob_julio.no_sono_na_ah = true;
+    
+    mensaje_una_vez = false;
 }
 
 if (instance_exists(ob_nevera_zoom)){

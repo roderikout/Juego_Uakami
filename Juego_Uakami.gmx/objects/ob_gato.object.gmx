@@ -35,6 +35,8 @@ gato_llaves = true;
 
 yo_soy = "gato";
 
+gato_caminando = false;
+
 sp = 15;
 
 acciones_antes_beber_leche = 0;
@@ -42,6 +44,8 @@ acciones_antes_beber_leche = 0;
 acciones_cuenta_gato = 0;
 
 gato_bebe_leche = false;
+
+mensaje_caminando_salio = false;
 
 mensajeAyuda = "Pinina, siempre juguetona y hambrienta";
 </string>

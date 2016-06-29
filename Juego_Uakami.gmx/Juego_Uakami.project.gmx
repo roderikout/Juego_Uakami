@@ -199,7 +199,11 @@
     </scripts>
     <scripts name="scripts Mensajeria">
       <script>scripts\scr_mensaje_status_puerta.gml</script>
+      <script>scripts\scr_mensaje_status_energia_full.gml</script>
+      <script>scripts\scr_mensaje_status_taza_llena.gml</script>
       <script>scripts\scr_mensaje_status_gato.gml</script>
+      <script>scripts\scr_mensaje_status_gato_camina.gml</script>
+      <script>scripts\scr_mensaje_status_gato_bebe.gml</script>
       <script>scripts\scr_mensaje_status_manos.gml</script>
       <script>scripts\scr_mensaje_status_sin_cafe.gml</script>
       <script>scripts\scr_mensaje_status_sin_energia.gml</script>
@@ -209,6 +213,7 @@
       <script>scripts\scr_mensaje_alerta_gato.gml</script>
       <script>scripts\scr_mensaje_alerta_manos.gml</script>
       <script>scripts\scr_on_off_mensajes.gml</script>
+      <script>scripts\scr_on_off_una_vez_mensajes.gml</script>
       <script>scripts\scr_mensajes_ayuda.gml</script>
     </scripts>
     <scripts name="scripts Nevera y Plato">

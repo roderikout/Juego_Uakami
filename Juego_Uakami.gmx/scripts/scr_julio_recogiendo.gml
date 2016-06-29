@@ -2,7 +2,6 @@
 
 //hay que volver este script escalable
 
-
 //  chequear si estan las manos vacias, activar estado de manos ocupadas, desaparecer objeto clicado y sumar una accion
 
 if (!manos_ocupadas){ // recoge objeto
@@ -27,7 +26,7 @@ if (!manos_ocupadas){ // recoge objeto
         ob_nivel1_1_UI.energia -=1;
     }else{
         julio_alert_state = scr_julio_dormido;
-    }    
+    }   
 } else { //suelta objeto
     if (intento_recoger == en_manos){
         switch (en_manos) {

@@ -2,11 +2,21 @@
 
 sprite_index = sp_gato_caminando_default;
 
+
 if (mouse_check_button_released(mb_left)){
-    audio_play_sound(snd_na_ah, 9, false) 
+    if(!audio_is_playing(snd_na_ah) && ob_julio.no_sono_na_ah){
+        audio_play_sound(snd_na_ah, 8, false);
+        ob_julio.no_sono_na_ah = false;
+    }            
+    
+    if (!mensaje_caminando_salio){
+        ob_nivel1_1_UI.mensajes_state = scr_mensaje_status_gato_camina;
+    }
 }
 
-if (gato_bebe_leche){
+if (ob_nivel1_1_UI.plato_lleno_en_suelo){
+
+    gato_caminando = true;
     // determinar la distancia entre gato y el el plato
     dist = point_distance(x, y,ob_plato.x - 15, y);
     
@@ -23,9 +33,9 @@ if (gato_bebe_leche){
     } 
 
 } else {
-
+    gato_caminando = true;
     // determinar la distancia entre Julio y el punto a ir
-    dist = point_distance(x, y,ob_tile4.x, y)
+    dist = point_distance(x, y,ob_tile4.x + 20, y)
     
     // si la distancia es mayor a su velocidad, moverse
     if  dist > sp {    

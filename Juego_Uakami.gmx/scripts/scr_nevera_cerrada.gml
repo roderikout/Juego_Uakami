@@ -6,7 +6,10 @@ if (nevera_cerrada) {
         ob_nivel1_1_UI.juego_pausa = true;
         alarm[0] = 15;
         nevera_state = scr_nevera_abierta;
-        audio_play_sound(snd_nevera_abre, 8, false);
+        if(!ob_nevera.sono_abrir_puerta){
+            audio_play_sound(snd_nevera_abre, 8, false);
+            ob_nevera.sono_abrir_puerta = true;
+        }
     }else{
         ob_nivel1_1_UI.mensajes_state = scr_mensaje_alerta_manos;
         nevera_state = scr_nevera_desactivada;

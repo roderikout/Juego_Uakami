@@ -56,8 +56,7 @@
     <instance objName="ob_plato" x="1639" y="757" name="inst_A7072894" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_cafetera" x="782" y="550" name="inst_36A8B653" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_nevera" x="1441" y="728" name="inst_045E2A37" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_gato" x="650" y="752" name="inst_17A2C793" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_llaves" x="794" y="766" name="inst_D739705F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_gato" x="683" y="749" name="inst_17A2C793" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_tile1" x="167" y="807" name="inst_668714F8" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_tile2" x="285" y="809" name="inst_04E9AE25" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_tile3" x="431" y="809" name="inst_9E57E397" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>

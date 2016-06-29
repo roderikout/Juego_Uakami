@@ -34,6 +34,8 @@ yo_soy = "alerta";
 tipo_mensaje = "ninguno";
 
 audio_play_sound(snd_alerta, 9, false);
+
+depth = - 20;
 </string>
           </argument>
         </arguments>
@@ -58,8 +60,8 @@ audio_play_sound(snd_alerta, 9, false);
             <kind>1</kind>
             <string>/// Coordenadas
 
-draw_text(100, 200,"X = " + string(mouse_x));
-draw_text(100, 350,"Y = " + string(mouse_y));
+//draw_text(100, 200,"X = " + string(mouse_x));
+//draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>

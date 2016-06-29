@@ -2,6 +2,12 @@
 
 speed = 0;
 
+ob_gato.x = ob_plato.x - 20;
+
+gato_bebe_leche = true;
+
+gato_caminando = false;
+
 acciones_durante_gato_leche = ob_nivel1_1_UI.acciones;
 
 acciones_cuenta_gato = acciones_durante_gato_leche - acciones_antes_beber_leche;
