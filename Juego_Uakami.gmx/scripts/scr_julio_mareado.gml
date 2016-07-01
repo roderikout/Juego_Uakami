@@ -28,5 +28,11 @@ switch (en_manos){
         break;
 }
 
+if (ganaste){
+
+    julio_alert_state = scr_julio_contento;
+
+}
+
 sprite_index = sprite_actual;
 audio_sound_pitch(snd, 0.7);

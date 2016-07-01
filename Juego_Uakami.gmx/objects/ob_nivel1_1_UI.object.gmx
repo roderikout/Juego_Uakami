@@ -65,6 +65,8 @@ gato_caminando = false;
 
 //variables de mensajeria
 
+salio_mensaje_inicial = false;
+
 sale_mensaje = false; // para alarma de mensaje perdiste, ganaste
 
 mensaje_off = true;
@@ -124,11 +126,39 @@ audio_stop_sound(snd_ganaste);
 
 suena = true; // variable para sonido de a ah de objetos no usables
 
+alarm[6] = 20; // para que pase un segundo y medio inicial antes de que aparezca el mensaje inicial
+
+segundos_iniciales = false;
 
 // to test
 
 donde_estoy = "nowhere";
 isBoton = 0;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="2" enumb="6">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// segundos iniciales
+
+segundos_iniciales = true;
 </string>
           </argument>
         </arguments>
@@ -324,143 +354,24 @@ mensaje_perdiste = true;
             <kind>1</kind>
             <string>///activa el estado de juego que está funcionando actualmente
 
-script_execute(mensajes_state);
-script_execute(cafe_state);
-script_execute(hago_click);
+
+    script_execute(hago_click);
+    script_execute(mensajes_state);
+    script_execute(cafe_state);
+    
+if (acciones &gt;= 1 &amp;&amp; !salio_mensaje_inicial){
+
+    if(segundos_iniciales){
+        script_execute(scr_mensaje_alerta_inicial);
+        salio_mensaje_inicial = true;
+    }
+}
 </string>
           </argument>
         </arguments>
       </action>
     </event>
     <event eventtype="8" enumb="75">
-      <action>
-        <libid>1</libid>
-        <id>603</id>
-        <kind>7</kind>
-        <userelative>0</userelative>
-        <isquestion>0</isquestion>
-        <useapplyto>-1</useapplyto>
-        <exetype>2</exetype>
-        <functionname></functionname>
-        <codestring></codestring>
-        <whoName>self</whoName>
-        <relative>0</relative>
-        <isnot>0</isnot>
-        <arguments>
-          <argument>
-            <kind>1</kind>
-            <string>/// GUI HUD
-/*
-if(!instance_exists(ob_icono_taza)){
-
-    taza_1 = instance_create(115, 69, ob_icono_taza);
-    taza_2 = instance_create(215, 69, ob_icono_taza);
-    taza_3 = instance_create(315, 69, ob_icono_taza);
-
-}
-
-if(!instance_exists(ob_icono_ojo)){
-
-    ojo = instance_create(445, 42, ob_icono_ojo);
-
-}
-
-if(!instance_exists(ob_icono_energia)){
-
-    barra_energia = instance_create(585, 62, ob_icono_energia);
-
-}
-
-if(!instance_exists(ob_icono_acciones)){
-
-    icono_acciones = instance_create(910, 37, ob_icono_acciones);
-
-}
-
-// Para controlar el HUD
-
-if(instance_exists(ob_icono_taza)){
-    switch(ob_nivel1_1_UI.cafe_en_taza){
-        case 3:
-            taza_1.sprite_index = sp_icono_taza_llena;
-            taza_2.sprite_index = sp_icono_taza_llena;
-            taza_3.sprite_index = sp_icono_taza_llena;
-            break;
-        case 2:
-            taza_1.sprite_index = sp_icono_taza_llena;
-            taza_2.sprite_index = sp_icono_taza_llena;
-            taza_3.sprite_index = sp_icono_taza_vacia;
-            break;
-        case 1:
-            taza_1.sprite_index = sp_icono_taza_llena;
-            taza_2.sprite_index = sp_icono_taza_vacia;
-            taza_3.sprite_index = sp_icono_taza_vacia;
-            break;
-        case 0:
-            taza_1.sprite_index = sp_icono_taza_parpadea;
-            taza_2.sprite_index = sp_icono_taza_parpadea;
-            taza_3.sprite_index = sp_icono_taza_parpadea;
-            break;
-    
-    }
-    
-    switch(ob_nivel1_1_UI.energia){
-        case 5:
-            ojo.sprite_index = sp_icono_ojo_despierto;
-            barra_energia.sprite_index = sp_icono_energia_5;
-            break;
-        case 4:
-            ojo.sprite_index = sp_icono_ojo_despierto;
-            barra_energia.sprite_index = sp_icono_energia_4;
-            break;
-        case 3:
-            ojo.sprite_index = sp_icono_ojo_despierto;
-            barra_energia.sprite_index = sp_icono_energia_3;
-            break;
-        case 2:
-            ojo.sprite_index = sp_icono_ojo_cansado_2;
-            barra_energia.sprite_index = sp_icono_energia_2;
-            break;
-        case 1:
-            ojo.sprite_index = sp_icono_ojo_cansado_2;
-            barra_energia.sprite_index = sp_icono_energia_1;
-            break;
-        case 0:
-            if(ob_julio.estado_actual = "mareado"){
-                ojo.sprite_index = sp_icono_ojo_mareado;
-                barra_energia.sprite_index = sp_icono_energia_parpadea;
-            } else if (ob_julio.estado_actual = "dormido"){
-                ojo.sprite_index = sp_icono_ojo_dormido;
-                barra_energia.sprite_index = sp_icono_energia_0;
-            }
-            
-            break;
-    }
-}
-
-// GUI de numero de acciones y testing
-
-if (GUI_on){
-    if (ob_nivel1_1_UI.GUI_on){
-        draw_set_font(fnt_ayudas);
-        violet = make_colour_rgb(70,55,54);
-        draw_set_colour(violet);
-        draw_text(920,40, string(ob_nivel1_1_UI.acciones));
-        
-        
-        //Para testings
-        //draw_text(32,80,"Testeo donde estoy: " + string(ob_nivel1_1_UI.donde_estoy));
-        //draw_text(32,96,"Testeo busco Ob_name: " + string(Obj_name));
-        //draw_text(32,112,"Testeo Tile_under: " + string(Tile_under));
-        //draw_text(32,128,"Testeo manos intentando: " + string(ob_julio.intento_recoger));
-        //draw_text(32,144,"Testeo donde estoy: " + string(donde_estoy));
-    
-    }
-}
-</string>
-          </argument>
-        </arguments>
-      </action>
       <action>
         <libid>1</libid>
         <id>603</id>
@@ -500,7 +411,7 @@ if (GUI_on == true){
     //Para testings
     //draw_text(32,80,"Testeo donde estoy: " + string(donde_estoy));
     //draw_text(32,96,"Testeo busco Tile_under: " + string(Tile_under));
-    draw_text(32,112,"Testeo isPausa: " + string(juego_pausa));
+    //draw_text(32,112,"Testeo isPausa: " + string(juego_pausa));
     //draw_text(32,128,"Testeo manos intentando: " + string(ob_julio.intento_recoger));
     //draw_text(32,144,"Testeo donde estoy: " + string(donde_estoy));
  /*   

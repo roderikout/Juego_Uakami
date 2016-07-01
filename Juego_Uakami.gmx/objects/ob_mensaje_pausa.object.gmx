@@ -59,7 +59,7 @@ depth = -120
             <string>/// steps del mensaje de pausa
 
 if(mouse_check_button_released(mb_left)){
-    if (point_in_rectangle(mouse_x, mouse_y, 304, 375, 781, 448)){   //si es el boton para reanudar juego
+    if (point_in_rectangle(mouse_x, mouse_y, 808, 442, 1099, 549)){   //si es el boton para reanudar juego
     
         ob_nivel1_1_UI.juego_pausa = false;
         ob_nivel1_1_UI.GUI_on = true;
@@ -69,7 +69,7 @@ if(mouse_check_button_released(mb_left)){
         }
     }
     
-    if (point_in_rectangle(mouse_x, mouse_y, 304, 470, 781, 543)){   //si es el boton para reiniciar juego
+    if (point_in_rectangle(mouse_x, mouse_y, 808, 583, 1099, 683)){   //si es el boton para reiniciar juego
         
         audio_play_sound(snd_click, 9, false)
         audio_stop_all();
@@ -77,7 +77,7 @@ if(mouse_check_button_released(mb_left)){
             
     }
     
-    if (point_in_rectangle(mouse_x, mouse_y, 304, 653, 781, 724)){   //si es el boton para salir del juego
+    if (point_in_rectangle(mouse_x, mouse_y, 808, 731, 1099, 810)){   //si es el boton para salir del juego
     
         game_end();
             

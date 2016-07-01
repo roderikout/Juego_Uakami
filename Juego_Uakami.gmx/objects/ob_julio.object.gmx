@@ -37,6 +37,8 @@ facing = 0; //0 = Right, 1 = Left
 
 sp = 15
 
+x_para_status = 0;
+
 var target_x
 
 manos_ocupadas = false;
@@ -63,7 +65,11 @@ dist = 10 //point_distance(x, y, target_x, y)
 
 perdiste = false;
 
+ganaste = false;
+
 no_sono_na_ah = true;
+
+image_xscale = -1;
 
 llegue = 0 //para testeo
 
@@ -96,6 +102,21 @@ script_execute(julio_mov_state) //estatico, caminando, recogiendo, abriendo_mueb
 script_execute(julio_alert_state) //despierto, cansado, mareado, dormido
 
 tile_actual = instance_position(x, y, ob_superTile);
+
+if (x - 235 &lt; 0){
+
+    x_para_status = 0;
+
+} else if (x + 111 &gt; room_width){
+
+    x_para_status = room_width - 111;
+
+} else {
+
+    x_para_status = x;
+
+}
+
 </string>
           </argument>
         </arguments>

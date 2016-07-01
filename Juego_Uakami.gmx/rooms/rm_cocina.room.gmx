@@ -66,10 +66,10 @@
     <instance objName="ob_tile7" x="1292" y="810" name="inst_F376F266" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_tile8" x="1500" y="809" name="inst_E1647EC7" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_tile9" x="1709" y="808" name="inst_850C1555" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_boton_cafe" x="1738" y="1058" name="inst_CD7C2061" locked="0" code="" scaleX="1.27999997138977" scaleY="1.26760566234589" colour="4294967295" rotation="0"/>
+    <instance objName="ob_boton_cafe" x="1740" y="1017" name="inst_CD7C2061" locked="0" code="" scaleX="0.899999976158142" scaleY="0.899999976158142" colour="4294967295" rotation="0"/>
     <instance objName="ob_nivel1_1_UI" x="0" y="0" name="inst_5167075F" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_llaves" x="616" y="746" name="inst_0BE8B2E4" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
-    <instance objName="ob_boton_pausa" x="1767" y="174" name="inst_94E0E4AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="ob_boton_pausa" x="1748" y="148" name="inst_94E0E4AD" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="ob_HUD" x="0" y="0" name="inst_4F46716E" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>

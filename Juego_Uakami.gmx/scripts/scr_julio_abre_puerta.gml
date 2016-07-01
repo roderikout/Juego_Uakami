@@ -1,6 +1,10 @@
 /// lo que sucede cuando Julio abre la puerta
 
+ganaste = true;
+
 ob_puerta.sprite_index = sp_puerta_abierta_default;
+
+sprite_index = sp_julio_contento;
 
 juego_pausa = true;
 

@@ -61,6 +61,9 @@
         <sprite>sprites\sp_julio_respira_anim_BW</sprite>
         <sprite>sprites\sp_julio_bebe_anim_BW</sprite>
       </sprites>
+      <sprites name="Julio Contento">
+        <sprite>sprites\sp_julio_contento</sprite>
+      </sprites>
     </sprites>
     <sprites name="Sprites para sin sprite">
       <sprite>sprites\sp_mensajes</sprite>
@@ -144,10 +147,14 @@
       <sprite>sprites\sp_gato_bebe</sprite>
       <sprite>sprites\sp_gato_llaves_default</sprite>
       <sprite>sprites\sp_mano_vacia</sprite>
+      <sprite>sprites\sp_potes</sprite>
+      <sprite>sprites\sp_pote_leche</sprite>
+      <sprite>sprites\sp_manzanas</sprite>
       <sprite>sprites\sp_mano_plato_lleno</sprite>
       <sprite>sprites\sp_mano_plato_vacio</sprite>
       <sprite>sprites\sp_animacion_leche</sprite>
     </sprites>
+    <sprite>sprites\sp_hielo</sprite>
   </sprites>
   <backgrounds name="background">
     <background>background\bk_cocina</background>
@@ -169,6 +176,7 @@
     <scripts name="scripts Julio">
       <scripts name="julio_alert_states">
         <script>scripts\scr_julio_despierto.gml</script>
+        <script>scripts\scr_julio_contento.gml</script>
         <script>scripts\scr_julio_cansado.gml</script>
         <script>scripts\scr_julio_mareado.gml</script>
         <script>scripts\scr_julio_dormido.gml</script>
@@ -210,6 +218,7 @@
       <script>scripts\scr_sin_mensaje.gml</script>
       <script>scripts\scr_elimina_mensajes.gml</script>
       <script>scripts\scr_mensaje_alerta_puerta.gml</script>
+      <script>scripts\scr_mensaje_alerta_inicial.gml</script>
       <script>scripts\scr_mensaje_alerta_gato.gml</script>
       <script>scripts\scr_mensaje_alerta_manos.gml</script>
       <script>scripts\scr_on_off_mensajes.gml</script>
@@ -230,6 +239,7 @@
   </scripts>
   <fonts name="fonts">
     <font>fonts\fnt_ayudas</font>
+    <font>fonts\fnt_ayudas_2</font>
   </fonts>
   <objects name="objects">
     <object>objects\ob_inicio</object>
@@ -261,6 +271,7 @@
         <object>objects\ob_selector</object>
         <object>objects\ob_mano_julio</object>
         <object>objects\ob_plato</object>
+        <object>objects\ob_items_nevera</object>
         <object>objects\ob_animacion_leche</object>
       </objects>
     </objects>
@@ -291,20 +302,6 @@
     <room>rooms\rm_inicio</room>
     <room>rooms\rm_cocina</room>
   </rooms>
-  <constants number="12">
-    <constant name="PLATOY">811</constant>
-    <constant name="PLATOX">1680</constant>
-    <constant name="GATOY1">757</constant>
-    <constant name="GATOX1">683</constant>
-    <constant name="LLAVESY">809</constant>
-    <constant name="LLAVESX">652</constant>
-    <constant name="FULL">1</constant>
-    <constant name="EMPTY">-1</constant>
-    <constant name="OPEN">1</constant>
-    <constant name="CLOSED">-1</constant>
-    <constant name="LEFT">-1</constant>
-    <constant name="RIGHT">1</constant>
-  </constants>
   <help>
     <rtf>help.rtf</rtf>
   </help>

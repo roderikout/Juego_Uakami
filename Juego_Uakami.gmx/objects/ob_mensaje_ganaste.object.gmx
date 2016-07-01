@@ -70,22 +70,53 @@ if (!ob_julio.perdiste){
             <kind>1</kind>
             <string>/// steps del mensaje de ganaste o perdiste
 
-
-if(mouse_check_button_released(mb_left)){
-    
-    if (point_in_rectangle(mouse_x, mouse_y, 715, 493, 1178, 562)){   //si es el boton para reanudar juego
-    
-        audio_stop_all();
-        room_goto(rm_cocina);
-            
+if (ob_julio.perdiste){ 
+    if(mouse_check_button_released(mb_left)){
+        
+        if (point_in_rectangle(mouse_x, mouse_y, 817, 425, 1089, 525)){   //si es el boton para reanudar juego
+        
+            audio_stop_all();
+            room_goto(rm_cocina);
+                
+        }
+        
+        if (point_in_rectangle(mouse_x, mouse_y, 817, 579, 1089, 662)){   //si es el boton para salir del juego
+        
+            game_end();
+                
+        }
     }
-    
-    if (point_in_rectangle(mouse_x, mouse_y, 715, 584, 1178, 656)){   //si es el boton para reanudar juego
-    
-        game_end();
+} else {
+
+    if(mouse_check_button_released(mb_left)){
+
+        if (point_in_rectangle(mouse_x, mouse_y, 808, 372, 1099, 485)){   //si es el boton para reanudar juego
+        
+            ob_nivel1_1_UI.juego_pausa = false;
+            ob_nivel1_1_UI.GUI_on = true;
+            audio_play_sound(snd_click, 9, false)
+            with (self){
+                instance_destroy();        
+            }
+        }
+        
+        if (point_in_rectangle(mouse_x, mouse_y, 808, 510, 1099, 623)){   //si es el boton para reiniciar juego
             
+            audio_play_sound(snd_click, 9, false)
+            audio_stop_all();
+            room_goto(rm_cocina);
+                
+        }
+        
+        if (point_in_rectangle(mouse_x, mouse_y, 808, 656, 1099, 751)){   //si es el boton para salir del juego
+        
+            game_end();
+                
+        }
     }
 }
+
+
 </string>
           </argument>
         </arguments>
@@ -112,6 +143,15 @@ if(mouse_check_button_released(mb_left)){
 
 //draw_text(100, 200,"X = " + string(mouse_x));
 //draw_text(100, 350,"Y = " + string(mouse_y));
+
+if (ob_julio.perdiste){
+
+    draw_text(814, 777, ob_nivel1_1_UI.acciones);
+
+} else {
+
+    draw_text(814, 831,ob_nivel1_1_UI.acciones);
+}
 </string>
           </argument>
         </arguments>

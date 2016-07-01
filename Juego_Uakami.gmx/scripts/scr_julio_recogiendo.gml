@@ -7,8 +7,10 @@
 if (!manos_ocupadas){ // recoge objeto
     switch(intento_recoger){   
         case "plato":
-            ob_plato.soy_silueta = true;
-            audio_play_sound(snd_recoge_plato, 8, false);
+            if (!ob_nivel1_1_UI.plato_lleno_en_suelo){
+                ob_plato.soy_silueta = true;
+                audio_play_sound(snd_recoge_plato, 8, false);
+            }
             break;
         case "llaves":
             ob_llaves.sprite_index = sp_silueta_llaves_default;
@@ -17,15 +19,20 @@ if (!manos_ocupadas){ // recoge objeto
             audio_sound_gain(snd_exito_llave,0.3,0);
             audio_play_sound(snd_tomar_llaves, 8, false);
             break; 
-    } 
-    en_manos = intento_recoger;
-    manos_ocupadas = true;
-    julio_mov_state = scr_julio_estatico;
-    if (ob_nivel1_1_UI.energia > 0){  //solo podria salir mensaje status porque no tiene nada en manos
-        ob_nivel1_1_UI.acciones +=1;
-        ob_nivel1_1_UI.energia -=1;
-    }else{
-        julio_alert_state = scr_julio_dormido;
+    }
+    if ((intento_recoger = "plato" && !ob_nivel1_1_UI.plato_lleno_en_suelo) || intento_recoger = "llaves"){ 
+        en_manos = intento_recoger;
+        manos_ocupadas = true;
+        julio_mov_state = scr_julio_estatico;
+        if (ob_nivel1_1_UI.energia > 0){  //solo podria salir mensaje status porque no tiene nada en manos
+            ob_nivel1_1_UI.acciones +=1;
+            ob_nivel1_1_UI.energia -=1;
+        }else{
+            julio_alert_state = scr_julio_dormido;
+        }
+    } else {
+        audio_play_sound(snd_na_ah, 8, false);
+        julio_mov_state = scr_julio_estatico;
     }   
 } else { //suelta objeto
     if (intento_recoger == en_manos){

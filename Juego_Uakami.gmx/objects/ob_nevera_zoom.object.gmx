@@ -60,33 +60,37 @@ sono_liquido = false;
             <kind>1</kind>
             <string>/// crear zonas iluminadas para objetos seleccionados
 
-var selector_potes, selector_guisantes, selector_manzanas, selector_leche;
-var selector_nevera_clicado;
+var potes, guisantes, manzanas, leche;
+var nevera_clicado;
 
-if (!instance_exists(ob_selector)){
-    selector_potes = instance_create(x + 75, y + 20, ob_selector);
-    selector_potes.mi_identificador = "potes";   
-    selector_guisantes = instance_create(x + 235, y + 20, ob_selector); 
-    selector_guisantes.mi_identificador = "guisantes";  
-    selector_manzanas = instance_create(x + 45, y + 190, ob_selector);
-    selector_manzanas.mi_identificador = "manzanas";   
-    selector_leche = instance_create(x + 215, y + 185, ob_selector); 
-    selector_leche.mi_identificador = "leche"; 
-    selector_leche.mensajeAyuda = "Alimento preferido de los mamiferos";   
+if (!instance_exists(ob_items_nevera)){
+    potes = instance_create(x + 750, y + 460, ob_items_nevera);
+    potes.sprite_index = sp_potes;
+    potes.mi_identificador = "potes";   
+    hielo = instance_create(x + 860, y + 460, ob_items_nevera);
+    hielo.sprite_index = sp_hielo; 
+    hielo.mi_identificador = "hielo";  
+    manzanas = instance_create(x + 690, y + 670, ob_items_nevera);
+    manzanas.sprite_index = sp_manzanas;
+    manzanas.mi_identificador = "manzanas";   
+    leche = instance_create(x + 890, y + 635, ob_items_nevera);
+    leche.sprite_index = sp_pote_leche; 
+    leche.mi_identificador = "leche"; 
+    leche.mensajeAyuda = "Alimento preferido de los mamiferos";   
 }
 
 if mouse_check_button_released(mb_left){
-    if (instance_position(mouse_x, mouse_y, ob_selector)){
+    if (instance_position(mouse_x, mouse_y, ob_items_nevera)){
         audio_play_sound(snd_click, 9, false)
-        selector_nevera_clicado = instance_position(mouse_x, mouse_y, ob_selector);
-        objeto_nevera_seleccionado = selector_nevera_clicado.mi_identificador;
-        if (selector_nevera_clicado.mi_identificador == "leche" &amp;&amp; ob_julio.en_manos = "plato" &amp;&amp; ob_plato.plato_vacio){
+        nevera_clicado = instance_position(mouse_x, mouse_y, ob_items_nevera);
+        objeto_nevera_seleccionado = nevera_clicado.mi_identificador;
+        if (nevera_clicado.mi_identificador == "leche" &amp;&amp; ob_julio.en_manos = "plato" &amp;&amp; ob_plato.plato_vacio){
         
             if(!instance_exists(ob_animacion_leche)) {
             
                 if(ob_nevera_zoom.aparece_animacion_leche){
             
-                    instance_create(x-135, y -135, ob_animacion_leche);
+                    instance_create(x, y, ob_animacion_leche);
                 }
             }
             if(!audio_is_playing(snd_llena_plato_leche) &amp;&amp; ob_nevera_zoom.sono_liquido == false){
@@ -98,6 +102,31 @@ if mouse_check_button_released(mb_left){
     }
 }
 
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Coordenadas
+//draw_text(100, 200,"X = " + string(mouse_x));
+//draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>

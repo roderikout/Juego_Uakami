@@ -2,7 +2,7 @@
 
 if (!ob_julio.caminando){
     if (!instance_exists(ob_mensajes_status)){
-        mensaje_activo = instance_create (ob_julio.x, ob_julio.y - 400, ob_mensajes_status); 
+        mensaje_activo = instance_create (ob_julio.x_para_status, ob_julio.y - 400, ob_mensajes_status); 
         mensaje_activo.sprite_index = sp_mensaje_status_cafe;
         mensaje_off = false;
         alarm[1] = 105;

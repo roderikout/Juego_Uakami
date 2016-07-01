@@ -85,7 +85,7 @@ if (mouse_check_button_released(mb_left) && !ob_julio.caminando){
     
         if (Obj_parent == "interactuable" || Obj_parent == "mueble_con_ventana"){
         
-            if(Obj_name == "boton_cafe" && ob_julio.estado_actual != "dormido"){
+            if(Obj_name == "boton_cafe" && ob_julio.estado_actual != "dormido" && !juego_pausa){
 
                 if (energia < max_energia){
                     audio_play_sound(snd_click, 9, false)

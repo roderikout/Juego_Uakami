@@ -29,32 +29,32 @@
 
 if(!instance_exists(ob_icono_taza)){
 
-    taza_1 = instance_create(115, 69, ob_icono_taza);
+    taza_1 = instance_create(1505, 69, ob_icono_taza);
     taza_1.depth = - 100;
-    taza_2 = instance_create(215, 69, ob_icono_taza);
+    taza_2 = instance_create(1565, 69, ob_icono_taza);
     taza_2.depth = - 100;
-    taza_3 = instance_create(315, 69, ob_icono_taza);
+    taza_3 = instance_create(1625, 69, ob_icono_taza);
     taza_3.depth = - 100;
 
 }
 
 if(!instance_exists(ob_icono_ojo)){
 
-    ojo = instance_create(445, 42, ob_icono_ojo);
+    ojo = instance_create(1205, 60, ob_icono_ojo);
     ojo.depth = - 100;
 
 }
 
 if(!instance_exists(ob_icono_energia)){
 
-    barra_energia = instance_create(585, 62, ob_icono_energia);
+    barra_energia = instance_create(1290, 62, ob_icono_energia);
     barra_energia.depth = - 100;
 
 }
 
 if(!instance_exists(ob_icono_acciones)){
 
-    icono_acciones = instance_create(910, 37, ob_icono_acciones);
+    icono_acciones = instance_create(890, 47, ob_icono_acciones);
     icono_acciones.depth = - 100;
 
 }
@@ -165,21 +165,21 @@ if(instance_exists(ob_icono_taza)){
             <string>///GUI de numero de acciones y testing
 
 if (ob_nivel1_1_UI.GUI_on){
-    //draw_set_font(fnt_ayudas);
+    draw_set_font(fnt_ayudas);
     violet = make_colour_rgb(70,55,54);
     draw_set_colour(violet);
-    draw_text(920,40, string(ob_nivel1_1_UI.acciones));
+    draw_text(885,43, string(ob_nivel1_1_UI.acciones));
     
-    if(ob_nivel1_1_UI.mensaje_ayuda_activo == true){
-
-        draw_text(32,900, ob_nivel1_1_UI.mensaje_ayuda_actual);
-    
-    }
+    //if(ob_nivel1_1_UI.mensaje_ayuda_activo == true){
+    //    draw_set_font(fnt_ayudas_2);
+    //    draw_text(22,900, ob_nivel1_1_UI.mensaje_ayuda_actual);
+    //
+    //}
      
     //Para testings
     //draw_text(32,80,"Testeo donde estoy: " + string(ob_nivel1_1_UI.donde_estoy));
     //draw_text(32,96,"Testeo busco Ob_name: " + string(Obj_name));
-    //draw_text(32,112,"Testeo Tile_under: " + string(Tile_under));
+    //draw_text(32,112,"Testeo plato en suelo: " + string(ob_nivel1_1_UI.plato_lleno_en_suelo));
     //draw_text(32,128,"Testeo manos intentando: " + string(ob_julio.intento_recoger));
     //draw_text(32,144,"Testeo donde estoy: " + string(donde_estoy));
 

@@ -5,7 +5,7 @@ if (mensajes_alerta_salieron[0] != 1){
         instance_create (x, y, ob_blanco_fondo); 
         mensaje_activo = instance_create(x , y, ob_mensajes_alerta);
         mensaje_activo.sprite_index = sp_mensaje_alerta_puerta; 
-        instance_create(ob_mensajes_alerta.bbox_right - 94, ob_mensajes_alerta.bbox_top + 26, ob_x_cierra);
+        instance_create(1209, 333, ob_x_cierra);
     
         juego_pausa = true;
         mensajes_alerta_salieron[0] = 1;

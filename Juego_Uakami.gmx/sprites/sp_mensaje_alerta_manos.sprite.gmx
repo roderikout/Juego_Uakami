@@ -3,22 +3,22 @@
   <type>0</type>
   <xorig>0</xorig>
   <yorigin>0</yorigin>
-  <colkind>1</colkind>
+  <colkind>0</colkind>
   <coltolerance>0</coltolerance>
-  <sepmasks>0</sepmasks>
+  <sepmasks>-1</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>0</bbox_left>
-  <bbox_right>1095</bbox_right>
-  <bbox_top>0</bbox_top>
-  <bbox_bottom>708</bbox_bottom>
+  <bbox_left>474</bbox_left>
+  <bbox_right>1427</bbox_right>
+  <bbox_top>205</bbox_top>
+  <bbox_bottom>922</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>1096</width>
-  <height>709</height>
+  <width>1920</width>
+  <height>1080</height>
   <frames>
     <frame index="0">images\sp_mensaje_alerta_manos_0.png</frame>
   </frames>

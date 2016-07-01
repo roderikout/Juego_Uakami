@@ -7,18 +7,18 @@
   <coltolerance>0</coltolerance>
   <sepmasks>0</sepmasks>
   <bboxmode>0</bboxmode>
-  <bbox_left>42</bbox_left>
-  <bbox_right>102</bbox_right>
-  <bbox_top>35</bbox_top>
-  <bbox_bottom>85</bbox_bottom>
+  <bbox_left>6</bbox_left>
+  <bbox_right>66</bbox_right>
+  <bbox_top>5</bbox_top>
+  <bbox_bottom>55</bbox_bottom>
   <HTile>0</HTile>
   <VTile>0</VTile>
   <TextureGroups>
     <TextureGroup0>0</TextureGroup0>
   </TextureGroups>
   <For3D>0</For3D>
-  <width>145</width>
-  <height>121</height>
+  <width>69</width>
+  <height>58</height>
   <frames>
     <frame index="0">images\sp_x_cierra_0.png</frame>
   </frames>

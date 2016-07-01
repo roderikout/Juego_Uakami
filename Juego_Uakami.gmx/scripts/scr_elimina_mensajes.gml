@@ -32,7 +32,7 @@ if (instance_exists(ob_nevera_zoom)){
         instance_destroy();
     }
     
-    with(ob_selector){
+    with(ob_items_nevera){
         instance_destroy();
     }
     

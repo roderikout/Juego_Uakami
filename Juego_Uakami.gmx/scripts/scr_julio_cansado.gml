@@ -32,12 +32,11 @@ switch (en_manos){
         sprite_actual = sp_julio_cansado_llaves_default;
         break;
 }
-/*
-if (!ob_plato.plato_vacio){
-    sprite_actual = sp_julio_cansado_plato_lleno_default;
-} else {
-    sprite_actual = sp_julio_cansado_plato_default;
-}*/
 
+if (ganaste){
+
+    julio_alert_state = scr_julio_contento;
+
+}
 
 sprite_index = sprite_actual;

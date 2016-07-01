@@ -2,7 +2,7 @@
 <object>
   <spriteName>sp_obj_parents</spriteName>
   <solid>0</solid>
-  <visible>0</visible>
+  <visible>-1</visible>
   <depth>0</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
@@ -51,11 +51,56 @@ audio_play_sound(snd_inicio, 8, true);
             <kind>1</kind>
             <string>/// cuando haga click, next room
 
-if mouse_check_button_released(mb_left) {
+//if mouse_check_button_released(mb_left) {
 
-    room_goto(rm_cocina);
+//    room_goto(rm_cocina);
 
+//}
+
+if(mouse_check_button_released(mb_left)){
+    if (point_in_rectangle(mouse_x, mouse_y, 290, 367, 474, 540)){   //si es el boton para reanudar juego
+    
+        room_goto(rm_cocina);
+    }
+    
+    if (point_in_rectangle(mouse_x, mouse_y, 487, 367, 675, 540)){   //si es el boton para reiniciar juego
+        
+        
+            
+    }
+    
+    if (point_in_rectangle(mouse_x, mouse_y, 808, 686, 1099, 876)){   //si es el boton para salir del juego
+    
+        game_end();
+            
+    }
 }
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="64">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>/// Coordenadas
+
+//draw_text(100, 200,"X = " + string(mouse_x));
+//draw_text(100, 350,"Y = " + string(mouse_y));
 </string>
           </argument>
         </arguments>

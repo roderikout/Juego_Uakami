@@ -5,8 +5,8 @@ var nevera_zoom, mano_julio;
 if (zoom == true){
     if (!instance_exists(ob_nevera_zoom)){
         blanco_fondo = instance_create (ob_nivel1_1_UI.x, ob_nivel1_1_UI.y, ob_blanco_fondo);
-        nevera_zoom = instance_create(ob_blanco_fondo.x + 756, ob_blanco_fondo.y + 362, ob_nevera_zoom);  
-        instance_create(ob_nevera_zoom.bbox_right - 74, ob_nevera_zoom.bbox_top + 26, ob_x_cierra);
+        nevera_zoom = instance_create(ob_nivel1_1_UI.x, ob_nivel1_1_UI.y, ob_nevera_zoom);  
+        instance_create(1209, 333, ob_x_cierra);
         juego_pausa = true;
         
         if (!ob_julio.manos_ocupadas){
